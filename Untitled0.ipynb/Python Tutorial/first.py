@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyNi3sRE5MV9wZ9qC47F3Jxj",
+      "authorship_tag": "ABX9TyPPa2pSfD4EjP5CK4+i3grR",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,39 +28,42 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 2,
+      "execution_count": null,
       "metadata": {
         "id": "fWoFN6Un2sFl",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "69c1eaee-f153-430d-fec7-29ad982b530e"
+        "outputId": "76c89f30-8359-482b-bcd7-9203b4435435"
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
-            "Enter a number: 654\n",
-            "Greatest digit is: 6\n"
+            "Enter any number: 7\n"
           ]
         }
       ],
       "source": [
-        "# find greatest digit\n",
+        "num = int(input(\"Enter any number: \"))\n",
         "\n",
-        "#taking input from user\n",
-        "num1 = int(input(\"Enter a number: \"))\n",
-        "greatest = 0\n",
-        "\n",
-        "while num1 > 0:\n",
-        "    a = num1 % 10\n",
-        "    if a > greatest:\n",
-        "        greatest = a\n",
-        "    num1 = num1 // 10\n",
-        "\n",
-        "print(\"Greatest digit is:\", greatest)"
+        "for x in range(1, num + 1):\n",
+        "    if (num % x == 0 and x % 2 == 0):\n",
+        "        print(x, end=\",\")"
       ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "id": "N5UQqnwd0-tg"
+      },
+      "execution_count": null,
+      "outputs": []
     }
   ]
 }

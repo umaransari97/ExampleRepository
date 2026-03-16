@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyNtbGvua5wu68Dy+npt/ykk",
+      "authorship_tag": "ABX9TyNi3sRE5MV9wZ9qC47F3Jxj",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,53 +28,38 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 2,
       "metadata": {
-        "id": "fWoFN6Un2sFl"
-      },
-      "outputs": [],
-      "source": []
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "# to find out hcf\n",
-        "\n",
-        "# input two numbers\n",
-        "num1 = int(input(\"Enter first number: \"))\n",
-        "num2 = int(input(\"Enter second number: \"))\n",
-        "\n",
-        "# -----------------\n",
-        "\n",
-        "if num2 == 0:\n",
-        "    print(\"HCF:\", num1)\n",
-        "\n",
-        "else:\n",
-        "    while num2 != 0:\n",
-        "        rem = num1 % num2\n",
-        "        num1 = num2\n",
-        "        num2 = rem\n",
-        "\n",
-        "    print(\"HCF:\", num1)"
-      ],
-      "metadata": {
+        "id": "fWoFN6Un2sFl",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "QryC3eEG4NDI",
-        "outputId": "2aef10bc-eddd-4c7c-a31c-ee522619f5d5"
+        "outputId": "69c1eaee-f153-430d-fec7-29ad982b530e"
       },
-      "execution_count": 8,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Enter first number: 2\n",
-            "Enter second number: 3\n",
-            "HCF: 1\n"
+            "Enter a number: 654\n",
+            "Greatest digit is: 6\n"
           ]
         }
+      ],
+      "source": [
+        "# find greatest digit\n",
+        "\n",
+        "#taking input from user\n",
+        "num1 = int(input(\"Enter a number: \"))\n",
+        "greatest = 0\n",
+        "\n",
+        "while num1 > 0:\n",
+        "    a = num1 % 10\n",
+        "    if a > greatest:\n",
+        "        greatest = a\n",
+        "    num1 = num1 // 10\n",
+        "\n",
+        "print(\"Greatest digit is:\", greatest)"
       ]
     }
   ]
